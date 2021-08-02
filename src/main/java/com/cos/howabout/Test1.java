@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Controller
-public class Test1 {
+public class Test1 { 
  
 		
     // 상세보기 페이지
@@ -84,9 +84,14 @@ public class Test1 {
         return "layout/header";
     }
 
-    @GetMapping("/test12")
+    @GetMapping("/test")
     public String test12() {
-        return "userUpdate";
+        return "test";
+    }
+    
+    @GetMapping("/test2") 
+    public String test185() {
+        return "test2";
     }
 
 }
