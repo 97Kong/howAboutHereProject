@@ -280,4 +280,14 @@ public class Test1 {
 		return "/payment/paySuccess";
 	}
 
+	// master(관리자) 페이지 연습용 -------------------------------
+	@GetMapping("/master/detail")
+	public String mdetail() {
+		return "/master/m-detail";
+	}
+
+	@GetMapping("/master/list")
+	public String mlist() {
+		return "/master/m-motelList";
+	}
 }
