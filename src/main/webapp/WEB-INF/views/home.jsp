@@ -23,7 +23,7 @@
 								<h5 class="card-title">
 									<a href="">모텔</a>
 								</h5>
-								<a href="/motelList" class="btn">더보기</a>
+								<a href="list/motelList" class="btn">더보기</a>
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 								<h5 class="card-title">
 									<a href="">호텔</a>
 								</h5>
-								<a href="hotelList" class="btn">더보기</a>
+								<a href="#" class="btn">더보기</a>
 							</div>
 						</div>
 					</div>
@@ -45,7 +45,7 @@
 								<h5 class="card-title">
 									<a href="">리조트</a>
 								</h5>
-								<a href="resortList" class="btn">더보기</a>
+								<a href="#" class="btn">더보기</a>
 							</div>
 						</div>
 					</div>

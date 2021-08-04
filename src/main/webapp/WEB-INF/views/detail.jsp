@@ -65,7 +65,7 @@
 									<h5 class="fw-bolder">4인실</h5>
 									<!-- Product price-->
 									150,000원 ~ 200,000원
-									<a href="test2">
+									<a href="/payMain">
 									<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
 									</a>
 								</div>
@@ -76,7 +76,7 @@
 				</div>
 
 				<div class="col mb-5">
-					<a href="#">
+					<a href="/">
 						<div class="card h-100" style="border: 1px solid #808080;">
 							<!-- Product image-->
 							<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."

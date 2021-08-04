@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -12,6 +13,7 @@
 <!-- Favicons -->
 <link href="/img/favicon.png" rel="icon">
 <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <!-- Google Fonts -->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -21,7 +23,18 @@
 <link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
 <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
-<link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="/vendor/owl.carousel/assets/owl.carousel.min.css"
+	rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- CDN (content delevery network -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <link href="/vendor/venobox/venobox.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
@@ -48,17 +61,33 @@
 				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 			</div>
 			<div class="subscribe-form">
-				<input type="text" name="search_head" style="border: 2px solid #606060"> <img src="/img/ico_srch_2.png" button type="button" class="btn_srch_open " style="right: 396px;">
-				</button>
+				<form action="/list/searchList" method="get">
+					<input type="text" name="searchKeyword"
+						style="border: 2px solid #606060"/> 
+						
+					<button>	
+						<img src="/img/ico_srch_2.png" class="btn_srch_open" style="right: 396px;">
+					</button>
+
+				</form>
+			  
+
 			</div>
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
-					<li><a href="login">로그인</a></li>
-					<!--if문으로 로그인이 되었을때 보여줘야하는 페이지!~--->
-					<li><a href="reslist">예약내역</a></li>
-					<li><a href="afterlist">후기</a></li>
-					<li><a href="logout">로그아웃</a></li>
 
+					<c:choose>
+						<c:when test="${empty sessionScope.principal}">
+						<li><a href="login">로그인</a></li>
+						<li><a href="reslist">예약내역</a></li>
+						</c:when>
+						<c:otherwise>
+						<li><a href="/userUpdate">회원정보변경</a></li>
+						<li><a href="#">예약내역</a></li>
+						<li><a href="/post">문의사항</a></li>
+						<li><a href="/user/logout">로그아웃</a></li>
+						</c:otherwise>
+					</c:choose>
 				</ul>
 			</nav>
 			<!-- .nav-menu -->
