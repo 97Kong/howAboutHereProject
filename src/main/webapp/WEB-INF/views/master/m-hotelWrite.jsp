@@ -34,9 +34,8 @@
 
 
 		<div style="padding:10px">
-			<label>사진(최대 3개):</label>
-			<input type="text" id="">
-			<button style="margin-left: 10px;">사진찾기</button>
+			<label>사진:</label>
+			<input type="file" id="">
 		</div>
 		<div style="padding:10px">
 			<label>홍보용글:</label>
