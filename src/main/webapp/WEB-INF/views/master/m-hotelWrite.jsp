@@ -4,48 +4,23 @@
 
 <main id="main">
 
-	<!-- 카테고리 선택란 -->
-	<div class="checkBoxBox">
-		<div class="form-check-inline"  style="padding:10px">
-			<label>
-				<input type="checkbox" value="">모텔
-			</label>
-		</div>
-
-		<div class="form-check-inline">
-			<label>
-				<input type="checkbox" value="">호텔
-			</label>
-		</div>
-
-		<div class="form-check-inline">
-			<label>
-				<input type="checkbox" value="">리조트
-			</label>
-		</div>
+	<!-- 숙박업소 입력란 --->
+	<div  style="padding:10px">
+		<label>호텔명:</label>
+		<input type="text" id="">
 	</div>
-
-	<!-- 호텔 입력란 --->
+	<div  style="padding:10px">
+		<label>호텔성급:			
+				<select id="">
+					<option>★</option>
+					<option>★★</option>
+					<option>★★★</option>
+					<option>★★★★</option>
+					<option>★★★★★</option>
+				</select>
+		</label>
+	</div>
 	<div id="detailBox">
-		<div  style="padding:10px">
-			<label>호텔명:</label>
-			<input type="text" id="">
-		</div>
-		<div  style="padding:10px">
-			<label>호텔성급:			
-					<select id="">
-						<option>★</option>
-						<option>★★</option>
-						<option>★★★</option>
-						<option>★★★★</option>
-						<option>★★★★★</option>
-					</select>
-			</label>
-		</div>
-
-		
-
-	
 	
 		<div class="form-group"  style="padding:10px; margin-bottom:30px">
 			<div class="form-group">
@@ -57,13 +32,18 @@
 			<button type="button" onClick="goPopup();" style="width: 150px; border: 2px solid black">주소찾기</button>
 		</div>
 
+
 		<div style="padding:10px">
-			<label>사진:</label>
+			<label>사진(최대 3개):</label>
 			<input type="text" id="">
+			<button style="margin-left: 10px;">사진찾기</button>
 		</div>
 		<div style="padding:10px">
 			<label>홍보용글:</label>
 			<textarea class="form-control" rows="5" id="comment" style="width: 500px"></textarea>
+		</div>
+		<div>
+			
 		</div>
 	</div>
 	<button>저장</button>

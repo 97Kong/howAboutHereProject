@@ -50,12 +50,12 @@
 
 	
 		<div class="container" style="padding: 20px; margin-left: 800px; margin-top: 130px;">
-				<div class="button" style="margin-bottom: 20px;margin-left: 560px"><a href="/master/motel-write"><button>숙소등록</button></div></a>
+				<div class="button" style="margin-bottom: 20px;margin-left: 560px"><a href="/master/hotel-write"><button>숙소등록</button></div></a>
 			<a href="/detail">
 				<div class="card" style="width: 650px; height: 300px; background-image: url(/img/aquahotel4.jpg); background-size: cover; border: 2px solid #808080;">
 					<div class="card-body" style="color: black; width: 650px; height: 300px; margin: auto;">
-						<h2 style="margin-left: 15px;">그냥모텔</h2>
-						<h4>&nbsp &nbsp &nbsp 위치 -  부산 수영구</h4>
+						<h2 style="margin-left: 15px;">아쿠아펠리스호텔</h2>
+						<h4>&nbsp &nbsp &nbsp ★★★ / 부산 수영구</h4>
 					</div>
 				</div>
 			</a>

@@ -81,6 +81,12 @@ public class Test1 {
 		return "home";
 	}
 
+	// 예약 내역 페이지
+	@GetMapping("/reservation")
+	public String rvt() {
+		return "list/reservation";
+	}
+
 	// 모텔 리스트 페이지
 	@GetMapping("/list/motelList")
 	public String motelList() {
@@ -280,14 +286,53 @@ public class Test1 {
 		return "/payment/paySuccess";
 	}
 
-	// master(관리자) 페이지 연습용 -------------------------------
-	@GetMapping("/master/detail")
-	public String mdetail() {
-		return "/master/m-detail";
+	// master(관리자) 페이지-------------------------------
+
+	// 모텔등록
+	@GetMapping("/master/motel-write")
+	public String motelWrite() {
+		return "/master/m-motelWrite";
 	}
 
-	@GetMapping("/master/list")
-	public String mlist() {
+	// 호텔등록
+	@GetMapping("/master/hotel-write")
+	public String hotelWrite() {
+		return "/master/m-hotelWrite";
+	}
+
+	// 리조트등록
+	@GetMapping("/master/resort-write")
+	public String resortWrite() {
+		return "/master/m-resortWrite";
+	}
+
+	// 모텔리스트
+	@GetMapping("/master/motelList")
+	public String mList() {
 		return "/master/m-motelList";
+	}
+
+	// 호텔리스트
+	@GetMapping("/master/hotelList")
+	public String hList() {
+		return "/master/m-hotelList";
+	}
+
+	// 리조트리스트
+	@GetMapping("/master/resortList")
+	public String rList() {
+		return "/master/m-resortList";
+	}
+
+	// 수정
+	@GetMapping("/master/detailModify")
+	public String mModigy() {
+		return "/master/m-detailModify";
+	}
+
+	// 방등록
+	@GetMapping("/master/mRoom")
+	public String mRoom() {
+		return "/master/m-room";
 	}
 }

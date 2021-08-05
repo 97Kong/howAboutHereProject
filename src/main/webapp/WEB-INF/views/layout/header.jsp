@@ -83,7 +83,7 @@
 						</c:when>
 						<c:otherwise>
 						<li><a href="/userUpdate">회원정보변경</a></li>
-						<li><a href="#">예약내역</a></li>
+						<li><a href="/reservation">예약내역</a></li>
 						<li><a href="/post">문의사항</a></li>
 						<li><a href="/user/logout">로그아웃</a></li>
 						</c:otherwise>
