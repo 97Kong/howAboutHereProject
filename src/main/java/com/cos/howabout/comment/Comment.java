@@ -25,11 +25,11 @@ public class Comment {
 	@JsonIgnoreProperties({"posts"}) // posts부분은 json으로 파싱하지 않게다는 말이다.
 	@JoinColumn(name = "user_id") // Foreign키 이름
 	@ManyToOne()
-	private com.cos.howabout.user.User user;
+	private User user;
 	
 	@JsonIgnoreProperties({"user"}) // users부분은 json으로 파싱하지 않겠다는 말이다.
 	@JoinColumn(name = "post_id") // Foreign키 이름
 	@ManyToOne()
-	private com.cos.howabout.post.Post post;
+	private Post post;
 	
 }

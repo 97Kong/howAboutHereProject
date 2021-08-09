@@ -61,15 +61,17 @@
 				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 			</div>
 			<div class="subscribe-form">
-				<form action="/list/searchList" method="get">
+				 <form action="/list/motelList" method="get">
 					<input type="text" name="searchKeyword"
-						style="border: 2px solid #606060"/> 
+						style="border: 1px solid #000"/> 
 						
-					<button>	
-						<img src="/img/ico_srch_2.png" class="btn_srch_open" style="right: 396px;">
-					</button>
+					
+						<img src="/img/ico_srch_2.png" class="btn_srch_open" style="right: 396px; ">
+					
 
 				</form>
+				
+		
 			  
 
 			</div>
@@ -78,8 +80,8 @@
 
 					<c:choose>
 						<c:when test="${empty sessionScope.principal}">
-						<li><a href="login">로그인</a></li>
-						<li><a href="reslist">예약내역</a></li>
+						<li><a href="/login">로그인</a></li>
+						<li><a href="/reslist">예약내역</a></li>
 						</c:when>
 						<c:otherwise>
 						<li><a href="/userUpdate">회원정보변경</a></li>

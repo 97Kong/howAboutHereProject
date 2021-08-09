@@ -1,10 +1,10 @@
 server:
   port: 8000
   servlet:
-   encoding:
-     charset: UTF-8
-     
-spring:     
+    encoding:
+      charset: UTF-8
+
+spring:
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -16,10 +16,9 @@ spring:
     url: jdbc:mysql://localhost:3306/howdb
   output:
     ansi:
-      enabled: always  
+      enabled: always
   jpa:
-   hibernate:
-    ddl-auto: none #create, update, none
-   show-sql: true
-   open-in-view: true
-
+    hibernate:
+      ddl-auto: none #create, update, none
+    show-sql: true
+    open-in-view: true

@@ -25,7 +25,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id; // 프라이머리키 (기본키)
 	
-	@Column(unique = true, length = 20)
+	@Column(nullable=false, unique = true, length = 20)
 	private String username;
 	private String password;
 	private String email;

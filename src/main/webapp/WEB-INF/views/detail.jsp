@@ -19,13 +19,14 @@
 				
       					
 				</div>
+				 
 				<div class="col-lg-4 portfolio-info">
 					<h3>
-						<strong>아쿠아펠리스호텔</strong>
+						<strong>${restEntity.name}</strong>
 					</h3>
 					<ul>
-						<li><strong>위치</strong>: 부산시 수영구</li>
-						<li><strong>성급</strong>: ★★★</li>
+						<li><strong>위치</strong>: ${restEntity.location}</li>
+						<li><strong>성급</strong>: ${restEntity.level }</li>
 					</ul>
 					<br>
 					<div class="text-box-detail"
@@ -34,17 +35,15 @@
 						<p>
 							<strong style="margin-left: 10%;">사장님의 한마디</strong>
 						</p>
-						<p style="margin-left: 10%; color: #808080;">아름다운 광안대교가 보이는
-							아쿠아펠리스호텔로 오세용~!!@~!@!~</p>
+						<p style="margin-left: 10%; color: #808080;">${restEntity.comment }</p>
 					</div>
 						 <form>
 				 	 
-				 		<label for="party"><p style="font-size: 30px; color: black;">예약 날짜</p>
-      					<p><input type="date" value="" required></p>
-      					</label>
+				 	
       					
    				 </form>
 				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -52,8 +51,23 @@
 	<section class="py-5">
 		<div class="container px-4 px-lg-5 mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+		<c:forEach var="motel" items="${motel}">
+			<div class="container" style="padding: 20px; margin-left: 800px; margin-top: 50px;">
+				<a href="/detail/${motel.id}">
+					<div class="card" style="width: 650px; height: 300px; background-image: url(/img/aquahotel4.jpg); background-size: cover; ">
+						<div class="card-body" style="color: black; width: 650px; height: 300px; margin: auto;">
+							<h2 style="margin-left: 15px;">${motel.name}</h2>
+							<h4>&nbsp &nbsp &nbsp ${motel.level}/${motel.location}</h4>
+						</div>
+					</div>
+				</a>
+			</div>
+		</c:forEach>
+
+			<c:forEach var="rooms" items="${rooms}">
 				<div class="col mb-5">
-					<a href="#">
+					<a href="#" style="color: black;">
 						<div class="card h-100" style="border: 1px solid #808080;">
 							<!-- Product image-->
 							<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."
@@ -62,10 +76,10 @@
 							<div class="card-body p-4">
 								<div class="text-center" style="color: black;">
 									<!-- Product name-->
-									<h5 class="fw-bolder">4인실</h5>
+									<h5 class="fw-bolder">${rooms.name}</h5>
 									<!-- Product price-->
-									150,000원 ~ 200,000원
-									<a href="/payMain">
+									${rooms.price}원<br>
+									<a href="/payMain/${restEntity.id}">
 									<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
 									</a>
 								</div>
@@ -74,67 +88,8 @@
 						</div>
 					</a>
 				</div>
+			</c:forEach>
 
-				<div class="col mb-5">
-					<a href="/">
-						<div class="card h-100" style="border: 1px solid #808080;">
-							<!-- Product image-->
-							<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."
-								style="border: 1px solid #808080;" />
-							<!-- Product details-->
-							<div class="card-body p-4">
-								<div class="text-center" style="color: black;">
-									<!-- Product name-->
-									<h5 class="fw-bolder">2인실</h5>
-									<!-- Product price-->
-									100,000원 ~ 150,000원
-									<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
-								</div>
-							</div>
-							<!-- Product actions-->
-						</div>
-					</a>
-				</div>
-				<div class="col mb-5">
-					<a href="#">
-						<div class="card h-100" style="border: 1px solid #808080;">
-							<!-- Product image-->
-							<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."
-								style="border: 1px solid #808080;" />
-							<!-- Product details-->
-							<div class="card-body p-4">
-								<div class="text-center" style="color: black;">
-									<!-- Product name-->
-									<h5 class="fw-bolder">8인실</h5>
-									<!-- Product price-->
-									400,000원 ~ 500,000원
-									<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
-								</div>
-							</div>
-							<!-- Product actions-->
-						</div>
-					</a>
-				</div>
-				<div class="col mb-5">
-					<a href="#">
-						<div class="card h-100" style="border: 1px solid #808080;">
-							<!-- Product image-->
-							<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."
-								style="border: 1px solid #808080;" />
-							<!-- Product details-->
-							<div class="card-body p-4">
-								<div class="text-center" style="color: black;">
-									<!-- Product name-->
-									<h5 class="fw-bolder">128인실</h5>
-									<!-- Product price-->
-									5,200,00원 ~ 5,300,00원
-									<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
-								</div>
-							</div>
-							<!-- Product actions-->
-						</div>
-					</a>
-				</div>
 			</div>
 		</div>
 	</section>

@@ -71,7 +71,7 @@
 		let parseResponse = await response.text();
 		
 		if(parseResponse === "ok"){
-			location.href = "/";
+			location.href = "/home";
 		}else{
 			alert("삭제실패");
 		}

@@ -32,13 +32,13 @@
 						<p style="margin-left: 10%; color:black;">2021년 8월 3일</p>
 						<hr align="center" width="90%">
 						    <strong style="margin-left: 10%; font-weight: bold;" >총 예약가</strong>
-						    <font style="margin-left: 30%; margin-top: 10px; color: #f7323f;" ><strong>25,000원</strong></font>
+						    <font style="margin-left: 30%; margin-top: 10px; color: #f7323f;" ><strong>${rooms.price}</strong></font>
 						    <ul style="margin-top: 20%;">
 						    <li>해당 객실가는 세금, 봉사료가 포함된 금액입니다</li>
 						   	<li style="margin-top: 3%;">결제완료 후<font color="red"> 예약자 이름</font>으로 바로 <font color="red">체크인</font> 하시면 됩니다</li>
 						    <li style="margin-top: 3%;">해당 상품은 <font color="red">취소</font> 및 <font color="red">환불 불가</font>합니다</li>
 						    </ul>
-						<form method="get" action="home">
+						<form method="get" action="/home/${rooms.id}">
 						 <input type="submit"  class="btn_pay gra_left_right_red" data-v-2d73460d="" value="확인">
 						 </form>
 					

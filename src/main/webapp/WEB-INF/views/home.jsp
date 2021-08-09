@@ -23,7 +23,7 @@
 								<h5 class="card-title">
 									<a href="">모텔</a>
 								</h5>
-								<a href="list/motelList" class="btn">더보기</a>
+									<a href="list/aaa/motelList/{name}" class="btn"  style="background-color: #f7323f; border: 3px solid #f7323f; color: #fff;" >더보기</a>
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 								<h5 class="card-title">
 									<a href="">호텔</a>
 								</h5>
-								<a href="#" class="btn">더보기</a>
+									<a href="list/bbb/hotelList/{name}" class="btn"  style="background-color: #f7323f; border: 3px solid #f7323f; color: #fff;" >더보기</a>
 							</div>
 						</div>
 					</div>
@@ -45,7 +45,7 @@
 								<h5 class="card-title">
 									<a href="">리조트</a>
 								</h5>
-								<a href="#" class="btn">더보기</a>
+								<a href="list/ccc/resortList/{name}" class="btn"  style="background-color: #f7323f; border: 3px solid #f7323f; color: #fff;" >더보기</a>
 							</div>
 						</div>
 					</div>

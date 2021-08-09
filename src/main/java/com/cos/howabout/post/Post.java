@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 
 import com.cos.howabout.user.User;
 
-
 @Entity
 public class Post {
 	@Id
@@ -20,13 +19,12 @@ public class Post {
 	private String title; // varchar(255), 255는 글자수 //char 고정 varchar 가변
 	@Lob // Long text의 어노테이션이다. 큰글자수를 넣을수있다. (jpa문법)
 	private String content;
-	
+
 	// jpa (java Persistence API\
 	@JoinColumn(name = "user_id") // 조인의 Foreign키의 이름을 바꾸는 어노테이션이다.(잡기술)
-	@ManyToOne(fetch = FetchType.EAGER) //Foreign 키를 만드는 어노테이션이다 JPA기술 -> hibernate -> ORM 
-	private User user;  // ORM 사용
-	
-	
+	@ManyToOne(fetch = FetchType.EAGER) // Foreign 키를 만드는 어노테이션이다 JPA기술 -> hibernate -> ORM
+	private User user; // ORM 사용
+
 	@Override
 	public String toString() {
 		return "Post [id=" + id + ", title=" + title + ", content=" + content + ", user=" + user + "]";
@@ -62,7 +60,6 @@ public class Post {
 
 	public void setContent(String content) {
 		this.content = content;
-	}	
-	
-	
+	}
+
 }
