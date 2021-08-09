@@ -9,12 +9,9 @@
 			<div class="row" style="width: 800px; height: 800px;">
 				<div class="col-lg-8">
 					<div class="owl-carousel portfolio-details-carousel">
-						<img src="/img/aqua123.jpg" class="img-fluid" alt=""
-							style="background-size: cover;"> <img
-							src="/img/aqua124.jpg" class="img-fluid" alt=""
-							style="background-size: cover;"> <img
-							src="/img/aqua125.jpg" class="img-fluid" alt=""
-							style="background-size: cover;">
+						<img src="/img/aqua123.jpg" class="img-fluid" alt=""style="background-size: cover;"> 
+						<img src="/img/aqua124.jpg" class="img-fluid" alt=""style="background-size: cover;"> 
+						<img src="/img/aqua125.jpg" class="img-fluid" alt=""style="background-size: cover;">
 					</div>
 				
       					
@@ -52,43 +49,36 @@
 		<div class="container px-4 px-lg-5 mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
-		<c:forEach var="motel" items="${motel}">
-			<div class="container" style="padding: 20px; margin-left: 800px; margin-top: 50px;">
-				<a href="/detail/${motel.id}">
-					<div class="card" style="width: 650px; height: 300px; background-image: url(/img/aquahotel4.jpg); background-size: cover; ">
-						<div class="card-body" style="color: black; width: 650px; height: 300px; margin: auto;">
-							<h2 style="margin-left: 15px;">${motel.name}</h2>
-							<h4>&nbsp &nbsp &nbsp ${motel.level}/${motel.location}</h4>
-						</div>
-					</div>
-				</a>
-			</div>
-		</c:forEach>
 
-			<c:forEach var="rooms" items="${rooms}">
-				<div class="col mb-5">
-					<a href="#" style="color: black;">
-						<div class="card h-100" style="border: 1px solid #808080;">
-							<!-- Product image-->
-							<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."
-								style="border: 1px solid #808080;" />
-							<!-- Product details-->
-							<div class="card-body p-4">
-								<div class="text-center" style="color: black;">
-									<!-- Product name-->
-									<h5 class="fw-bolder">${rooms.name}</h5>
-									<!-- Product price-->
-									${rooms.price}원<br>
-									<a href="/payMain/${restEntity.id}">
-									<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
-									</a>
+
+		
+			
+			<c:forEach var="rooms" items="${restEntity.roomsList}">
+						<div class="col mb-5">
+							<a href="#" style="color: black;">
+								<div class="card h-100" style="border: 1px solid #808080;">
+									<!-- Product image-->
+									<img class="card-img-top" src="/img/aquaRoom1.jpg" alt="..."
+										style="border: 1px solid #808080;" />
+									<!-- Product details-->
+									<div class="card-body p-4">
+										<div class="text-center" style="color: black;">
+											<!-- Product name-->
+											<h5 class="fw-bolder">${rooms.name}</h5>
+											<!-- Product price-->
+											${rooms.price}원<br>
+											<a href="/payMain/${rooms.id}">
+											<button style="background-color:#f3230f; color: white; margin-top: 10%;">예약하기</button>
+											</a>
+										</div>
+									</div>
+									<!-- Product actions-->
 								</div>
-							</div>
-							<!-- Product actions-->
+							</a>
 						</div>
-					</a>
-				</div>
 			</c:forEach>
+			
+			
 
 			</div>
 		</div>
